@@ -60,6 +60,7 @@ class Enemy {
 	
 	draw() {
 		
+		screen.circle(this.x, this.y, 20, Charcoal);
 		screen.circle(this.x, this.y, 20, Trans_Bone_White(map_x_to_y((this.life / this.start_life), 0, 1, 0.375, 1)));
 		
 	}

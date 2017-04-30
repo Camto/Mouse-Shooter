@@ -168,7 +168,8 @@ function frame() {
 		
 	}
 	
-	screen.clear_screen();
+	screen.rect(0, 0, screen.width, screen.height, "rgba(0, 0, 0, 0.25)");
+	// screen.clear_screen();
 	
 	if(tutorial) {
 		
