@@ -1,6 +1,7 @@
 function init() {
 	
 	screen = new Canvas(400, 400);
+	screen.draw.imageSmoothingEnabled = false;
 	
 	you = new Mouse();
 	your_bullets = [];
@@ -168,7 +169,7 @@ function frame() {
 		
 	}
 	
-	screen.rect(0, 0, screen.width, screen.height, "rgba(0, 0, 0, 0.25)");
+	screen.rect(0, 0, screen.width, screen.height, Trans_Charcoal(0.25));
 	// screen.clear_screen();
 	
 	if(tutorial) {
@@ -216,7 +217,9 @@ function frame() {
 			
 			tutorial_tip.optimal_y = -(screen.height / 4) + 1;
 			
-		} else if((!tutorial_tip_timer) && ((tutorial_tip.id == 8) && (tutorial_tip.y == -(screen.height / 4) + 1))) {
+		} else if((!tutorial_tip_timer) && ((tutorial_tip.id == 8) && (tutorial_tip.y == -(screen.height / 4) + 
+
+1))) {
 			
 			tutorial = false;
 			next_wave();
@@ -308,6 +311,9 @@ function frame() {
 		screen.text("Level " + level, screen.width / 2, screen.height / 2, "rgba(255, 255, 255, "+ (popup_timer > 90 ? map_x_to_y(popup_timer, 180, 90, 0, 1) : map_x_to_y(popup_timer, 90, 0, 1, 0)) +")", 32, "Courier", "Bold");
 		
 	}
+	
+	screen.draw.drawImage(screen.canvas, 0, 0, 400, 400, 0, 0, 200, 200);
+	screen.draw.drawImage(screen.canvas, 0, 0, 200, 200, 0, 0, 400, 400);
 	
 	window.requestAnimationFrame(frame);
 	

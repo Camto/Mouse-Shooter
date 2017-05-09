@@ -5,6 +5,11 @@ function Trans_Bone_White(alpha) {
 	
 }
 const Charcoal = "#282828";
+function Trans_Charcoal(alpha) {
+	
+	return "rgba(40, 40, 40, " + alpha + ")";
+	
+}
 
 function map_x_to_y(val, min1, max1, min2, max2) {
 	
