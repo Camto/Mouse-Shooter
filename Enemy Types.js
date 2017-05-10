@@ -82,7 +82,7 @@ class Tank extends Enemy {
 	
 	constructor(x, y, timer) {
 		
-		super(x, y, [[0.5, 100, timer]], 20);
+		super(x, y, [[0.5, 100, timer], [1.5, 100, timer + 50]], 20);
 		
 	}
 	
@@ -93,6 +93,46 @@ class Spinner extends Enemy {
 	constructor(x, y, timer) {
 		
 		super(x, y, [[1, 140, timer], [0.75, 140, timer + 10], [0.5, 140, timer + 20], [0.25, 140, timer + 30], [0, 140, timer + 40], [0, 140, timer + 70], [0.25, 140, timer + 80], [0.5, 140, timer + 90], [0.75, 140, timer + 100], [1, 140, timer + 110]], 5);
+		
+	}
+	
+}
+
+class L_Spinno extends Enemy {
+	
+	constructor(x, y, timer) {
+		
+		super(x, y, [[1.5, 140, timer], [1.25, 140, timer + 10], [1, 140, timer + 20], [0.75, 140, timer + 30], [0.5, 140, timer + 40], [0.5, 140, timer + 70], [0.75, 140, timer + 80], [1, 140, timer + 90], [1.25, 140, timer + 100], [1.5, 140, timer + 110]], 5);
+		
+	}
+	
+}
+
+class R_Spinno extends Enemy {
+	
+	constructor(x, y, timer) {
+		
+		super(x, y, [[0.5, 140, timer], [0.25, 140, timer + 10], [0, 140, timer + 20], [1.75, 140, timer + 30], [1.5, 140, timer + 40], [1.5, 140, timer + 70], [1.75, 140, timer + 80], [0, 140, timer + 90], [0.25, 140, timer + 100], [0.5, 140, timer + 110]], 5);
+		
+	}
+	
+}
+
+class B_Spinno extends Enemy {
+	
+	constructor(x, y, timer) {
+		
+		super(x, y, [[0, 140, timer], [1.75, 140, timer + 10], [1.5, 140, timer + 20], [1.25, 140, timer + 30], [1, 140, timer + 40], [1, 140, timer + 70], [1.25, 140, timer + 80], [1.5, 140, timer + 90], [1.75, 140, timer + 100], [0, 140, timer + 110]], 5);
+		
+	}
+	
+}
+
+class Sider_Tank extends Enemy {
+	
+	constructor(x, y, timer) {
+		
+		super(x, y, [[1, 100, timer], [0, 100, timer + 50]], 20);
 		
 	}
 	

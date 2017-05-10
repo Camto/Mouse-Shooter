@@ -14,8 +14,6 @@ class Canvas {
 		this.canvas.style.left = "0px";
 		this.canvas.style.bottom = "0px";
 		this.canvas.style.right = "0px";
-		this.canvas.style.backgroundColor = Charcoal;
-		// this.canvas.style.cursor = "none"; // Was only temporary!
 		
 	}
 	
@@ -32,7 +30,6 @@ class Canvas {
 		this.draw.fillStyle = colour;		
 		this.draw.arc(x, y, radius, 0, 2 * Math.PI);
 		this.draw.fill();
-		this.draw.closePath();
 		
 	}
 	

@@ -57,7 +57,48 @@ class Mouse {
 		if(this.mouse_down && !shot_timer) {
 			
 			shot_timer = 7.5;
-			your_bullets.push(new Bullet(this.x, this.y, 1.5 * Math.PI));
+			
+			switch(!fight_boss ? level : level - 1) {
+				
+				case 8:
+					
+					your_bullets.push(new Bullet(this.x, this.y, 0.75 * Math.PI));
+				
+				case 7:
+					
+					your_bullets.push(new Bullet(this.x, this.y, 1.75 * Math.PI));
+				
+				case 6:
+					
+					your_bullets.push(new Bullet(this.x, this.y, 0.25 * Math.PI));
+				
+				case 5:
+					
+					your_bullets.push(new Bullet(this.x, this.y, 1.25 * Math.PI));
+				
+				case 4:
+					
+					your_bullets.push(new Bullet(this.x, this.y, 0 * Math.PI));
+				
+				case 3:
+					
+					your_bullets.push(new Bullet(this.x, this.y, 1 * Math.PI));
+				
+				case 2:
+					
+					your_bullets.push(new Bullet(this.x, this.y, 0.5 * Math.PI));
+				
+				case 1:
+					
+					your_bullets.push(new Bullet(this.x, this.y, 1.5 * Math.PI));
+				
+				break;
+				
+				default:
+					
+					console.error("Error: incorrect level number"); break;
+				
+			}
 			
 		}
 		

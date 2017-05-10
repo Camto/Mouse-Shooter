@@ -1,7 +1,7 @@
 function init() {
 	
 	screen = new Canvas(400, 400);
-	screen.draw.imageSmoothingEnabled = false;
+	screen.rect(0, 0, screen.width, screen.height, Charcoal);
 	
 	you = new Mouse();
 	your_bullets = [];
@@ -35,6 +35,8 @@ function init() {
 	timer = Infinity;
 	boss = 0;
 	
+	// [[new Nincompoop(3/2, 1/2)], [Infinity]] // E.O.L.
+	
 	waves = [[
 		
 		[[new Basic(1/4, 1/4, 100), new Basic(3/4, 1/4, 250)], [300]], // wave 1
@@ -60,6 +62,18 @@ function init() {
 		[[new Righty(1/8, 1/8, 66), new Lefty(7/8, 1/8, 133), new Spinner(1/2, 3/16, 0)], [300]], // Wave 2
 		
 		[[new Spinner(1/8, 1/2, 0), new Spinner(7/8, 1/2, 70)], [300]], // Wave 3
+		
+		[[new Tank(1/4, 1/2, 50), new Tank(1/2, 1/2, 0), new Tank(3/4, 1/2, 50)], [600]], // Wave 4
+		
+		[[new R_Topster(1/8, 1, 30), new L_Topster(7/8, 1, 60)], [150]], // Wave 5
+		
+		[[new Spinner(1/2, 1/8, 0)], [300]], // Wave 6
+		
+		[[new R_Spinno(1/8, 1/2, 0), new L_Spinno(7/8, 1/2, 70)], [300]], // Wave 7
+		
+		[[new Spinner(1/2, 0, 70), new Tank(3/8, 0, 50), new Tank(5/8, 0, 50), new B_Spinno(1/2, 1, 70), new Tank(3/8, 1, 100), new Tank(5/8, 1, 100), new R_Spinno(0, 1/2, 140), new Sider_Tank(0, 3/8, 50), new Sider_Tank(0, 5/8, 50), new L_Spinno(1, 1/2, 140), new Sider_Tank(1, 3/8, 100), new Sider_Tank(1, 5/8, 100)], [Infinity]] // Wave 8
+		
+	], [
 		
 		[[new Nincompoop(3/2, 1/2)], [Infinity]] // E.O.L.
 		
@@ -174,7 +188,6 @@ function frame() {
 	}
 	
 	screen.rect(0, 0, screen.width, screen.height, Trans_Charcoal(0.25));
-	// screen.clear_screen();
 	
 	if(tutorial) {
 		
@@ -313,9 +326,6 @@ function frame() {
 		screen.text("Level " + level, screen.width / 2, screen.height / 2, "rgba(255, 255, 255, "+ (popup_timer > 90 ? map_x_to_y(popup_timer, 180, 90, 0, 1) : map_x_to_y(popup_timer, 90, 0, 1, 0)) +")", 32, "Courier", "Bold");
 		
 	}
-	
-	screen.draw.drawImage(screen.canvas, 0, 0, 400, 400, 0, 0, 200, 200);
-	screen.draw.drawImage(screen.canvas, 0, 0, 200, 200, 0, 0, 400, 400);
 	
 	window.requestAnimationFrame(frame);
 	
