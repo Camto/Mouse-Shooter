@@ -221,9 +221,7 @@ function frame() {
 			
 			tutorial_tip.optimal_y = -(screen.height / 4) + 1;
 			
-		} else if((!tutorial_tip_timer) && ((tutorial_tip.id == 8) && (tutorial_tip.y == -(screen.height / 4) + 
-
-1))) {
+		} else if((!tutorial_tip_timer) && ((tutorial_tip.id == 8) && (tutorial_tip.y == -(screen.height / 4) + 1))) {
 			
 			tutorial = false;
 			next_wave();
