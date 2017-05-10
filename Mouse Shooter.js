@@ -71,7 +71,7 @@ function init() {
 		
 		[[new R_Spinno(1/8, 1/2, 0), new L_Spinno(7/8, 1/2, 70)], [300]], // Wave 7
 		
-		[[new Spinner(1/2, 0, 70), new Tank(3/8, 0, 50), new Tank(5/8, 0, 50), new B_Spinno(1/2, 1, 70), new Tank(3/8, 1, 100), new Tank(5/8, 1, 100), new R_Spinno(0, 1/2, 140), new Sider_Tank(0, 3/8, 50), new Sider_Tank(0, 5/8, 50), new L_Spinno(1, 1/2, 140), new Sider_Tank(1, 3/8, 100), new Sider_Tank(1, 5/8, 100)], [Infinity]] // Wave 8
+		[[new Righty(0, 0, 100), new Spinner(1/2, 0, 70), new Tank(3/8, 0, 50), new Tank(5/8, 0, 50), new L_Topster(1, 1, 60), new B_Spinno(1/2, 1, 70), new Tank(3/8, 1, 100), new Tank(5/8, 1, 100), new R_Topster(0, 1, 30), new R_Spinno(0, 1/2, 140), new Sider_Tank(0, 3/8, 50), new Sider_Tank(0, 5/8, 50), new Lefty(1, 0, 200), new L_Spinno(1, 1/2, 140), new Sider_Tank(1, 3/8, 100), new Sider_Tank(1, 5/8, 100)], [Infinity]] // Wave 8
 		
 	], [
 		
