@@ -187,7 +187,7 @@ function frame() {
 		
 	}
 	
-	screen.rect(0, 0, screen.width, screen.height, Trans_Charcoal(0.25));
+	screen.rect(0, 0, screen.width, screen.height, Trans_Charcoal(0.375));
 	
 	if(tutorial) {
 		
@@ -260,7 +260,6 @@ function frame() {
 		you.update();
 		
 	}
-	// you.draw(); // Was only temporary!
 	
 	for(count = 0; count < enemies.length; count++) {
 		
