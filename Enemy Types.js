@@ -77,3 +77,23 @@ class Sider extends Enemy {
 	}
 	
 }
+
+class Tank extends Enemy {
+	
+	constructor(x, y, timer) {
+		
+		super(x, y, [[0.5, 100, timer]], 20);
+		
+	}
+	
+}
+
+class Spinner extends Enemy {
+	
+	constructor(x, y, timer) {
+		
+		super(x, y, [[1, 140, timer], [0.75, 140, timer + 10], [0.5, 140, timer + 20], [0.25, 140, timer + 30], [0, 140, timer + 40], [0, 140, timer + 70], [0.25, 140, timer + 80], [0.5, 140, timer + 90], [0.75, 140, timer + 100], [1, 140, timer + 110]], 5);
+		
+	}
+	
+}

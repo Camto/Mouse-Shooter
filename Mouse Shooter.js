@@ -55,9 +55,13 @@ function init() {
 		
 	], [
 		
-		[[new Basic(1/2, 1/4)], [300]], // Wave 1
+		[[new Tank(1/3, 1/3, 50), new Tank(2/3, 1/3, 100)], [450]], // Wave 1
 		
-		[[new Nincompoop(3/2, 1/2)], [Infinity]] // Wave 2
+		[[new Righty(1/8, 1/8, 66), new Lefty(7/8, 1/8, 133), new Spinner(1/2, 3/16, 0)], [300]], // Wave 2
+		
+		[[new Spinner(1/8, 1/2, 0), new Spinner(7/8, 1/2, 70)], [300]], // Wave 3
+		
+		[[new Nincompoop(3/2, 1/2)], [Infinity]] // E.O.L.
 		
 	]];
 	
