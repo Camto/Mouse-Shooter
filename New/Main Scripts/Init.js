@@ -1,10 +1,10 @@
 "use strict";
 
-var Mouse = import("../Game Objects/Mouse");
+var Mouse = require("../Game Objects/Mouse");
 
 function init() {
 	return {
-		
+		mouse: new Mouse()
 	};
 }
 

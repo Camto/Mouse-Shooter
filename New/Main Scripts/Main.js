@@ -1,8 +1,8 @@
 "use strict";
 
-var init = import("./Init");
-var update = import("./Update");
-var draw = import("./Draw");
+var init = require("./Init");
+var update = require("./Update");
+var draw = require("./Draw");
 
 function Main(_state) {
 	var state;
