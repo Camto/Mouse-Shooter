@@ -29,7 +29,6 @@ function init() {
 	next_tip();
 	
 	wave = 0;
-	level = 1;
 	showing_level = false;
 	fight_boss = false;
 	timer = Infinity;
@@ -136,10 +135,11 @@ function next_tip() {
 function begin() {
 	
 	tutorial = true;
+	level = 1;
 	
 	init();
 	
-	window.requestAnimationFrame(frame);
+	setInterval(frame, 1000/60);
 	
 }
 
@@ -325,8 +325,6 @@ function frame() {
 		screen.text("Level " + level, screen.width / 2, screen.height / 2, "rgba(255, 255, 255, "+ (popup_timer > 90 ? map_x_to_y(popup_timer, 180, 90, 0, 1) : map_x_to_y(popup_timer, 90, 0, 1, 0)) +")", 32, "Courier", "Bold");
 		
 	}
-	
-	window.requestAnimationFrame(frame);
 	
 }
 
